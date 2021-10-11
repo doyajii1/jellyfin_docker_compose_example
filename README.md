@@ -6,11 +6,13 @@ Install docker by following [https://docs.docker.com/desktop/#download-and-insta
 
 ### Run without logs
 ```sh
+cd jellyfin
 docker-compose up -d
 ```
 
 ### Run with logs
 ```sh
+cd jellyfin
 docker-compose up
 ```
 
