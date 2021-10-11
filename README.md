@@ -21,3 +21,12 @@ After setting up, you can place music/movie in the media folder
 ```sh
 ./vol/media
 ```
+
+## 4. Some helpful notes
+On Centos7, I had to run following commands after installing docker:
+```sh
+sudo usermod -aG docker $(whoami)
+sudo systemctl enable docker.service
+sudo systemctl start docker.service
+sudo chmod 666 /var/run/docker.sock
+```
