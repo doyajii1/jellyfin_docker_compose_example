@@ -1,0 +1,15 @@
+version: "3.5"
+services:
+  jellyfin:
+    image: jellyfin/jellyfin
+    container_name: jellyfin
+    user: "$PUID:$PGID"
+    ports:
+      - "8096:8096"
+    volumes:
+      - ./vol/config:/config
+      - ./vol/cache:/cache
+      - ./vol/media:/media
+      - ./vol/media2:/media2:ro
+    restart: "unless-stopped"
+#logged in through http://localhost:8096/
